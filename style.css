@@ -25,17 +25,19 @@ nav {
 .brand {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
 .nav-logo {
-    height: 1em;       /* same size as text */
+    height: 1.2em; /* slightly larger than text */
     width: auto;
 }
 
 .brand-text {
-    font-size: 1rem;   /* match nav links */
-    font-weight: 600;
+    font-size: 1.1rem;          /* slightly bigger */
+    font-weight: 600;           /* professional, not heavy */
+    font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.3px;      /* subtle polish */
 }
 
 /* --- Hero Section --- */
