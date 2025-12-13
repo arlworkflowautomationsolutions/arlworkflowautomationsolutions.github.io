@@ -171,24 +171,36 @@ nav {
     transform: translateY(-5px);
 }
 
-/* --- Why Choose Me Section --- */
-#why-choose-me {
-    padding: 80px 20px;
-    background-color: #fff;
-    max-width: 900px;
-    margin: 0 auto 50px auto;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+/* --- Why Choose Us Section --- */
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 2rem;
 }
 
-#why-choose-me h2 {
-    text-align: center;
-    margin-bottom: 30px;
+.features-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    line-height: 1.5;
 }
 
-#why-choose-me ul {
-    list-style: disc;
-    padding-left: 40px;
+/* Check icon */
+.features-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2563eb; /* professional blue */
+    font-weight: 600;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .features-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- Call-to-Action Section --- */
