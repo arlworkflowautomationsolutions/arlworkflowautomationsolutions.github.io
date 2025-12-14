@@ -35,8 +35,8 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 3rem;
-    white-space: nowrap; /* Tries to keep the text on a single line */
+    font-size: 2.5rem; /* ADJUSTED FONT SIZE FOR BETTER FIT */
+    white-space: normal; /* Allow wrapping to prevent horizontal scrolling */
 }
 
 h2 {
@@ -347,7 +347,7 @@ footer {
 /* 13. Media Queries for Responsiveness */
 @media (max-width: 768px) {
     h1 {
-        white-space: normal; /* Allow wrapping on smaller screens */
+        font-size: 2rem; /* Ensure H1 is small enough on tablets/phones */
     }
     
     .navbar {
@@ -368,10 +368,6 @@ footer {
 
     .hero {
         padding: 60px 5%;
-    }
-
-    h1 {
-        font-size: 2.5rem;
     }
 
     .service-cards {
