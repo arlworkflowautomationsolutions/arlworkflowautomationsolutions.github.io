@@ -48,11 +48,18 @@ nav {
 }
 
 /* Nav links */
-.nav-links {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 1.75rem;
+.nav-links li a {
+    font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;              /* black text */
+    text-decoration: none;   /* remove underline */
+}
+
+/* Optional hover effect (professional, subtle) */
+.nav-links li a:hover {
+    color: #2563eb;           /* soft blue on hover */
+    text-decoration: none;
 }
 
 /* --- Hero Section --- */
