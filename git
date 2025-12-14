@@ -2,3 +2,4 @@ git commit -m "Update design with modern styling and hero section"
 git push origin main
 git commit -m "Center 'Send Message' button below textarea in contact form"
 git push origin main
+git commit -m "Update navbar layout and logo sizing"
