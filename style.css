@@ -56,6 +56,17 @@ nav {
     text-decoration: none;   /* no underline */
 }
 
+/* Reset nav list */
+.nav-links {
+    list-style: none;      /* removes bullets */
+    padding: 0;            /* removes left indent */
+    margin: 0;             /* removes default spacing */
+    display: flex;         /* puts links in a row */
+    align-items: center;
+    gap: 1.75rem;
+    margin-left: auto;     /* pushes links to the right */
+}
+
 /* Visited links */
 .nav-links li a:visited {
     color: #2563eb;           /* professional blue */
