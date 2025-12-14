@@ -95,7 +95,7 @@ h2 {
 .hero {
     background-color: #e9f9ff; /* LIGHT BLUE BACKGROUND */
     padding: 80px 5%;
-    text-align: center;
+    text-align: center; /* CENTERS ALL CONTENT (Text and Button) */
     background-size: cover;
     background-position: center;
 }
