@@ -120,16 +120,17 @@
     <section id="contact">
     <h2>Get in Touch</h2>
     <div id="mc_embed_shell">
-        
         <div id="mc_embed_signup">
             <form action="https://gmail.us14.list-manage.com/subscribe/post?u=0c1405c3f6c5916b6b796a5d3&amp;id=19a4c8c3ec&amp;f_id=0041c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
                 <div id="mc_embed_signup_scroll">
+                    
                     <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
                     
                     <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
                     <div class="mc-field-group"><label for="mce-FNAME">Your Name <span class="asterisk">*</span></label><input type="text" name="FNAME" class="required text" id="mce-FNAME" required="" value=""></div>
+                    <div class="mc-field-group"><label for="mce-LNAME">Your Business </label><input type="text" name="LNAME" class="text" id="mce-LNAME" value=""></div>
                     
-                    <div class="mc-field-group"><label for="mce-LNAME">Your Message <span class="asterisk">*</span></label><textarea name="LNAME" class="required text" id="mce-LNAME" rows="5" required="" style="width:100%;"></textarea><span id="mce-LNAME-HELPERTEXT" class="helper_text">Tell us how we can help automate your business.</span></div>
+                    <div class="mc-field-group"><label for="mce-MMERGE3">Your Message </label><textarea name="MMERGE3" class="text" id="mce-MMERGE3" rows="5" style="width:100%;"></textarea><span id="mce-MMERGE3-HELPERTEXT" class="helper_text">Tell us how we can help automate your business.</span></div>
                     
                     <div hidden=""><input type="hidden" name="tags" value="1406"></div>
                     <div id="mce-responses" class="clear foot">
@@ -156,8 +157,7 @@
         <p>&copy; 2025 | ARL Workflow Automation Solutions</p>
     </footer>
 
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
     // SMS Phone Multi-Country Functionality
     if(!window.MC) {
       window.MC = {};
@@ -537,8 +537,9 @@
         updateCountryCodeInstruction(defaultProgram.countryCode, fieldName);
       }
 
+      
       var smsNotRequiredRemoveCountryCodeEnabled = true;
-      var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","type":"email","required":true,"audience_field_name":"Email Address","merge_id":0,"help_text_enabled":false,"enabled":true,"order":"0","field_type":"merge"},"FNAME":{"name":"FNAME","label":"Your Name","helper_text":"","type":"text","required":true,"audience_field_name":"First Name","enabled":true,"order":null,"field_type":"merge","merge_id":1},"LNAME":{"name":"LNAME","label":"Your Message","helper_text":"Tell us how we can help automate your business.","type":"text","required":true,"audience_field_name":"Last Name","enabled":true,"order":null,"field_type":"merge","merge_id":2}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
+      var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","type":"email","required":true,"audience_field_name":"Email Address","merge_id":0,"help_text_enabled":false,"enabled":true,"order":0,"field_type":"merge"},"FNAME":{"name":"FNAME","label":"Your Name","helper_text":"","type":"text","required":true,"audience_field_name":"First Name","merge_id":1,"help_text_enabled":false,"enabled":true,"order":1,"field_type":"merge"},"LNAME":{"name":"LNAME","label":"Your Business","helper_text":"","type":"text","required":false,"audience_field_name":"Last Name","merge_id":2,"help_text_enabled":true,"enabled":true,"order":2,"field_type":"merge"},"MMERGE3":{"name":"MMERGE3","label":"Your Message","helper_text":"Tell us how we can help automate your business.","type":"text","required":false,"audience_field_name":"Your Message","enabled":true,"order":3,"field_type":"merge","merge_id":3}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
       var isRequired = smsField ? smsField.required : false;
       var shouldAppendCountryCode = smsNotRequiredRemoveCountryCodeEnabled ? isRequired : true;
       
@@ -546,6 +547,7 @@
       if (phoneInput && defaultProgram.countryCallingCode && shouldAppendCountryCode) {
         phoneInput.value = defaultProgram.countryCallingCode;
       }
+      
 
       displayFlag?.addEventListener('click', function(e) {
         dropdown.focus();
@@ -570,7 +572,7 @@
         });
 
         var smsNotRequiredRemoveCountryCodeEnabled = true;
-        var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","type":"email","required":true,"audience_field_name":"Email Address","merge_id":0,"help_text_enabled":false,"enabled":true,"order":"0","field_type":"merge"},"FNAME":{"name":"FNAME","label":"Your Name","helper_text":"","type":"text","required":true,"audience_field_name":"First Name","enabled":true,"order":null,"field_type":"merge","merge_id":1},"LNAME":{"name":"LNAME","label":"Your Message","helper_text":"Tell us how we can help automate your business.","type":"text","required":true,"audience_field_name":"Last Name","enabled":true,"order":null,"field_type":"merge","merge_id":2}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
+        var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","type":"email","required":true,"audience_field_name":"Email Address","merge_id":0,"help_text_enabled":false,"enabled":true,"order":0,"field_type":"merge"},"FNAME":{"name":"FNAME","label":"Your Name","helper_text":"","type":"text","required":true,"audience_field_name":"First Name","merge_id":1,"help_text_enabled":false,"enabled":true,"order":1,"field_type":"merge"},"LNAME":{"name":"LNAME","label":"Your Business","helper_text":"","type":"text","required":false,"audience_field_name":"Last Name","merge_id":2,"help_text_enabled":true,"enabled":true,"order":2,"field_type":"merge"},"MMERGE3":{"name":"MMERGE3","label":"Your Message","helper_text":"Tell us how we can help automate your business.","type":"text","required":false,"audience_field_name":"Your Message","enabled":true,"order":3,"field_type":"merge","merge_id":3}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
         var isRequired = smsField ? smsField.required : false;
         var shouldAppendCountryCode = smsNotRequiredRemoveCountryCodeEnabled ? isRequired : true;
         
@@ -596,6 +598,5 @@
     });
     </script>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    
-</body>
+    </body>
 </html>
