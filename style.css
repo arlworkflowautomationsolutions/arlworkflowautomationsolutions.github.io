@@ -182,11 +182,11 @@ h2 {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
-    align-items: center;
+    /* These two lines center the modal on the screen */
+    align-items: center; 
     justify-content: center;
 }
 
-/* Modal Content Box */
 /* WhatsApp Floating Button (Desktop/Global) */
 .whatsapp-float {
     position: fixed;
@@ -203,7 +203,7 @@ h2 {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 10000;
     transition: all 0.3s ease-in-out;
-    cursor: pointer; /* Makes it look clickable */
+    cursor: pointer;
     animation: pulse 2s infinite;
 }
 
@@ -212,7 +212,6 @@ h2 {
     background-color: #128c7e;
 }
 
-/* Optional pulse animation */
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
     70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
@@ -233,7 +232,6 @@ h2 {
 .wa-modal-content h3 { margin-bottom: 10px; color: #128c7e; }
 .wa-modal-content p { font-size: 0.9rem; margin-bottom: 20px; color: #666; }
 
-/* Form Inputs */
 #wa-form input, #wa-form textarea {
     width: 100%;
     padding: 12px;
@@ -259,7 +257,6 @@ h2 {
 
 .wa-submit-btn:hover { background-color: #128c7e; }
 
-/* Close Button */
 .wa-close {
     position: absolute;
     top: 15px;
@@ -270,30 +267,19 @@ h2 {
 }
 
 /* 11. Footer */
-footer { background: var(--heading-color); color: white; text-align: center; padding: 40px 0; }
+footer { 
+    background: var(--heading-color); 
+    color: white; 
+    text-align: center; 
+    padding: 40px 0; 
+}
 
 /* 12. Media Queries */
 @media (max-width: 768px) {
     .navbar { flex-direction: column; text-align: center; }
     .nav-links { margin-top: 15px; }
     .steps, .service-cards { flex-direction: column; }
-    
-    /* Changes arrow direction to down on mobile */
     .step:not(:last-child)::after { content: '↓'; top: auto; bottom: -10px; right: 45%; }
-    
-    /* Stack CTA buttons vertically */
-    .cta-actions { flex-direction: column; } 
-    
-    .cta-actions .btn {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 10px; 
-    }
-    
-    .cta-actions .btn:last-child {
-        margin-bottom: 0; 
-    }
-
     .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
     h1 { font-size: 1.8rem; }
-} /* This is the only bracket that should close the media query */
+} /* <-- This bracket was missing or misplaced */
