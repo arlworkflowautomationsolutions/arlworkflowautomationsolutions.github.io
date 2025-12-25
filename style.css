@@ -72,10 +72,43 @@ h2 { font-size: 2rem; text-align: center; margin-bottom: 25px; }
     font-size: 1.05rem; width: 100%; display: block;
 }
 
-/* 10. CTA & Contact */
-#cta { padding: 80px 20px; text-align: center; }
-.cta-actions { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-#contact { padding: 60px 5%; }
+/* 10. Call-to-Action Section */
+#cta {
+    padding: 80px 20px;
+    text-align: center; /* Centers the Heading text */
+    background-color: #ffffff;
+}
+
+#cta h2 {
+    margin-bottom: 30px;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center; /* This centers the buttons horizontally */
+    align-items: center;
+    gap: 20px; /* Space between buttons as seen in your image */
+    flex-wrap: wrap; /* Ensures buttons stack nicely on mobile */
+}
+
+/* Base button style to match your blue CTA theme */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff; /* Vibrant blue from image_2550e7.png */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
 
 /* --- WHATSAPP GLOW STYLE --- */
 .whatsapp-float {
