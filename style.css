@@ -5,6 +5,7 @@
     --text-color: #333;
     --heading-color: #2c3e50; /* Darker heading color */
     --font-family: 'Inter', sans-serif;
+    --wa-green: #25d366; /* Added WhatsApp Green */
 }
 
 * {
@@ -15,7 +16,7 @@
 
 body {
     font-family: var(--font-family);
-    line-height: 1.4; /* Adjusted for tighter spacing */
+    line-height: 1.4;
     color: var(--text-color);
     background-color: #fff;
 }
@@ -35,9 +36,8 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2rem; /* Reduced size for fit */
-    line-height: 1.2; /* Ensures clear separation between the two lines */
-    /* white-space property removed to ensure text does not overflow */
+    font-size: 2rem;
+    line-height: 1.2;
 }
 
 h2 {
@@ -65,7 +65,7 @@ h2 {
 }
 
 .nav-logo {
-    height: 40px; /* Adjust as needed */
+    height: 40px;
     margin-right: 10px;
 }
 
@@ -76,8 +76,8 @@ h2 {
 }
 
 .nav-links {
-list-style: none;
-display: flex;
+    list-style: none;
+    display: flex;
 }
 
 .nav-links li a {
@@ -94,11 +94,9 @@ display: flex;
 
 /* 4. Hero Section */
 .hero {
-    background-color: #e9f9ff; /* LIGHT BLUE BACKGROUND */
+    background-color: #e9f9ff;
     padding: 80px 5%;
-    text-align: center; /* CENTERS ALL CONTENT (Text and Button) */
-    background-size: cover;
-    background-position: center;
+    text-align: center;
 }
 
 .hero-content {
@@ -131,31 +129,15 @@ display: flex;
     transform: translateY(-1px);
 }
 
-/* --- Value Proposition Section Styling --- */
-
+/* 6. Value Proposition */
 .value-prop-section {
     padding: 60px 20px;
-    background-color: #f7f7f7; /* Light background for contrast */
+    background-color: #f7f7f7;
     text-align: center;
-}
-
-.value-prop-section h2 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.value-prop-section .subtitle {
-    margin-bottom: 40px;
-    font-size: 1.1em;
-    color: #555;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .benefits-grid {
     display: grid;
-    /* Create 2 columns on desktop, 1 on mobile */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 30px;
@@ -165,50 +147,20 @@ display: flex;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
 }
 
 .benefit-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.benefit-card .icon {
-    font-size: 2.5em; /* Large icon size */
-    display: block;
-    margin-bottom: 15px;
-    color: #007bff; /* Use your primary brand color here */
-}
-
-.benefit-card h3 {
-    font-size: 1.4em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #222;
-}
-
-.benefit-card p {
-    color: #666;
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-/* Optional: Ensure the main container is limited */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* --- End Value Proposition Section Styling --- */
-
+/* 7. Services */
 #services {
     padding: 60px 5%;
 }
 
-/* 7. Service Cards */
 .service-cards {
     display: flex;
     gap: 30px;
@@ -223,35 +175,10 @@ display: flex;
     padding: 30px;
     width: 100%;
     max-width: 450px;
-    text-align: left;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.card h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.card ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.card ul li {
-    padding: 8px 0;
-    border-bottom: 1px dotted #eee;
-    font-size: 1rem;
-}
-
-.card ul li:last-child {
-    border-bottom: none;
-}
-
-/* 8. How It Works Section */
-#how-it-works {
-    background-color: var(--secondary-color);
-}
-
+/* 8. How It Works */
 .steps {
     display: flex;
     justify-content: space-between;
@@ -266,13 +193,6 @@ display: flex;
     position: relative;
 }
 
-.step h3 {
-    color: var(--primary-color);
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-}
-
-/* Optional: Add a visual indicator for the flow between steps */
 .step:not(:last-child)::after {
     content: '→';
     position: absolute;
@@ -281,114 +201,109 @@ display: flex;
     transform: translateY(-50%);
     font-size: 2rem;
     color: #ccc;
-    font-weight: 100;
-    line-height: 1;
 }
 
-/* 9. Why Choose Us */
-#why-choose-us {
-    background-color: #fff;
-    padding: 40px 5%;
-}
-
-.features-list {
-    list-style: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-}
-
+/* 9. Features */
 .features-list li {
-    background: #e9f5ff; /* Light blue background for emphasis */
+    background: #e9f5ff;
     padding: 15px;
     margin-bottom: 10px;
     border-left: 4px solid var(--primary-color);
     border-radius: 4px;
-    font-size: 1.05rem;
 }
 
-/* 10. Call-to-Action Section */
-#cta {
-    padding: 80px 20px;
-    text-align: center; /* Centers the H2 text */
-    background-color: #ffffff; /* Or your preferred brand color */
-}
+/* 10. WhatsApp Floating Button & Modal Styles */
 
-#cta h2 {
-    margin-bottom: 30px;
-}
-
-.cta-actions {
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--wa-green);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     display: flex;
-    justify-content: center; /* Centers buttons horizontally */
     align-items: center;
-    gap: 20px; /* Adds 20px of space between the two buttons */
-    flex-wrap: wrap; /* Ensures buttons stack on mobile devices */
+    justify-content: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Ensure buttons look like buttons if not already styled */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
 }
 
-/* 11. Contact Form */
-#contact {
-    padding: 60px 5%;
+@keyframes pulse-wa {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-float { animation: pulse-wa 2s infinite; }
+
+/* Modal Styles */
+.wa-modal {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
 }
 
-#contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
+.wa-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
 }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
+.close-wa {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.wa-modal-header { text-align: center; margin-bottom: 20px; }
+.wa-modal-header h3 { color: var(--wa-green); }
+
+.wa-form input, .wa-form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-family: var(--font-family);
-    font-size: 1rem;
 }
 
-#contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.form-button {
-    text-align: center;
-}
-
-/* Styling for the Send Message button (Blue) */
-.form-button button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: var(--primary-color);
+.wa-submit-btn {
+    background-color: var(--wa-green);
     color: white;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.1s;
+    padding: 14px;
     border: none;
+    border-radius: 8px;
+    width: 100%;
     cursor: pointer;
-    width: 100%; /* Full width */
+    font-weight: 700;
+    margin-top: 10px;
+    transition: background 0.3s;
 }
 
-.form-button button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-1px);
-}
+.wa-submit-btn:hover { background-color: #128c7e; }
 
-/* 12. Footer */
+/* 11. Footer */
 footer {
     background-color: var(--heading-color);
     color: white;
@@ -397,55 +312,28 @@ footer {
     font-size: 0.9rem;
 }
 
-/* 13. Media Queries for Responsiveness */
+/* 12. Media Queries */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; 
-    }
+    .navbar { flex-direction: column; }
+    .nav-links { margin-top: 10px; width: 100%; justify-content: space-around; }
+    .service-cards, .steps { flex-direction: column; }
     
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        margin-top: 10px;
-        width: 100%;
-        justify-content: space-around;
-    }
-
-    .nav-links li a {
-        padding: 5px 10px;
-        font-size: 0.9rem;
-    }
-
-    .hero {
-        padding: 60px 5%;
-    }
-
-    .service-cards {
-        flex-direction: column;
-    }
-
-    .steps {
-        flex-direction: column;
-    }
-
-    .step {
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 20px;
-    }
-
     .step:not(:last-child)::after {
         content: '↓';
         right: 50%;
         bottom: -20px;
         top: auto;
-        transform: translate(50%, 0);
+        transform: translateX(50%);
     }
 
-    .step:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
+    .wa-modal-content {
+        margin: 20% auto; /* Adjust modal position on mobile */
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
     }
 }
