@@ -186,7 +186,22 @@ h2 {
     justify-content: center;
 }
 
-/* WhatsApp Floating Button */
+/* 1. The Background Overlay (The "Pop-up" container) */
+.wa-modal {
+    display: none; /* Hidden by default - JS will change this to 'flex' */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dims the rest of the screen */
+    z-index: 20000; /* Must be higher than everything else */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 2. The Floating Button */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -211,13 +226,13 @@ h2 {
     background-color: #128c7e;
 }
 
+/* 3. The Unread Notification Badge */
 .wa-badge {
     position: absolute;
     top: -5px;
     right: -5px;
     background-color: #ff4d4d;
-    color: white;
-    font-size: 11px;
+    color: white;    font-size: 11px;
     font-weight: bold;
     width: 22px;
     height: 22px;
@@ -231,17 +246,12 @@ h2 {
     animation: bounce 2s infinite; 
 }
 
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
+/* 4. The White Box inside the Modal */
 .wa-modal-content {
     background-color: white;
     padding: 30px;
     border-radius: 15px;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     position: relative;
     box-shadow: 0 5px 25px rgba(0,0,0,0.2);
@@ -251,6 +261,7 @@ h2 {
 .wa-modal-content h3 { margin-bottom: 10px; color: #128c7e; }
 .wa-modal-content p { font-size: 0.9rem; margin-bottom: 20px; color: #666; }
 
+/* 5. Form Elements */
 #wa-form input, #wa-form textarea {
     width: 100%;
     padding: 12px;
@@ -258,6 +269,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: inherit;
+    font-size: 16px; /* Prevents auto-zoom on mobile */
 }
 
 #wa-form textarea { height: 80px; resize: none; }
@@ -276,6 +288,7 @@ h2 {
 
 .wa-submit-btn:hover { background-color: #128c7e; }
 
+/* 6. Close Button */
 .wa-close {
     position: absolute;
     top: 15px;
@@ -283,6 +296,13 @@ h2 {
     font-size: 24px;
     cursor: pointer;
     color: #999;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 @keyframes bounce {
